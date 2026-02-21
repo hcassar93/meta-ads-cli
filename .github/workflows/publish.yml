@@ -47,10 +47,10 @@ jobs:
             
             Install this version:
             ```bash
-            npm install -g meta-ads-cli@${{ github.ref_name }}
+            npm install -g hcassar-meta-ads@${{ github.ref_name }}
             ```
             
             Or install latest:
             ```bash
-            npm install -g meta-ads-cli
+            npm install -g hcassar-meta-ads
             ```
