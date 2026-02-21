@@ -1,5 +1,5 @@
 {
-  "name": "meta-ads-cli",
+  "name": "@hcassar93/meta-ads-cli",
   "version": "0.0.1",
   "description": "CLI for Meta (Facebook) Ads API with Node.js. Access campaigns, ad sets, ads, and insights.",
   "main": "dist/index.js",
