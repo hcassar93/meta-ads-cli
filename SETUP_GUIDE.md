@@ -44,6 +44,12 @@ npm install -g meta-ads-cli
 # Setup profile
 meta-ads-cli setup
 
+# During setup, enter:
+# - Profile name: local label only (use "default" if unsure)
+# - Meta App ID: Meta dashboard → Settings → Basic
+# - Meta App Secret: Meta dashboard → Settings → Basic
+# - Ad Account ID (optional): Ads Manager URL, e.g. act_1234567890
+
 # Authenticate
 meta-ads-cli auth
 

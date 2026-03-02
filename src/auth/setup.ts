@@ -6,33 +6,43 @@ import { startOAuthFlow, exchangeCodeForToken, getLongLivedToken } from './oauth
 
 export async function setupProfile(): Promise<void> {
   console.log(chalk.bold.cyan('\n🚀 Meta Ads CLI Setup\n'));
-  console.log(chalk.gray('Setting up a new profile for Meta Ads API access.\n'));
+  console.log(chalk.gray('Setting up a profile for Meta Ads API access.\n'));
+  console.log(chalk.cyan('Before you continue, open your Meta app dashboard:'));
+  console.log(chalk.gray('  https://developers.facebook.com/apps/'));
+  console.log(chalk.gray('  Settings → Basic → copy App ID + App Secret'));
+  console.log(chalk.gray('  Facebook Login → Settings → ensure redirect URI is:'));
+  console.log(chalk.gray('  http://localhost:3000/oauth/callback\n'));
+  console.log(chalk.cyan('You will enter 4 values:'));
+  console.log(chalk.gray('  1) Profile name  (local label, any name you want)'));
+  console.log(chalk.gray('  2) Meta App ID   (from your Meta app)'));
+  console.log(chalk.gray('  3) Meta App Secret (from your Meta app)'));
+  console.log(chalk.gray('  4) Ad Account ID (optional, format: act_1234567890)\n'));
 
   // Prompt for profile details
   const answers = await inquirer.prompt([
     {
       type: 'input',
       name: 'profileName',
-      message: 'Profile name:',
+      message: 'Profile name (local label, e.g. default, client1):',
       default: 'default',
-      validate: (input) => input.length > 0 || 'Profile name is required',
+      validate: (input) => input.trim().length > 0 || 'Profile name is required',
     },
     {
       type: 'input',
       name: 'appId',
-      message: 'Meta App ID:',
-      validate: (input) => input.length > 0 || 'App ID is required',
+      message: 'Meta App ID (from Settings → Basic):',
+      validate: (input) => input.trim().length > 0 || 'App ID is required',
     },
     {
       type: 'password',
       name: 'appSecret',
-      message: 'Meta App Secret:',
-      validate: (input) => input.length > 0 || 'App Secret is required',
+      message: 'Meta App Secret (from Settings → Basic):',
+      validate: (input) => input.trim().length > 0 || 'App Secret is required',
     },
     {
       type: 'input',
       name: 'adAccountId',
-      message: 'Ad Account ID (optional, format: act_XXXXXXXXX):',
+      message: 'Ad Account ID (optional, from Ads Manager URL, format act_1234567890):',
     },
   ]);
 

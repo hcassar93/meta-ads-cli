@@ -1,6 +1,6 @@
 {
   "name": "hcassar-meta-ads",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI for Meta (Facebook) Ads API with Node.js. Access campaigns, ad sets, ads, and insights.",
   "main": "dist/index.js",
   "type": "module",

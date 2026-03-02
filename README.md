@@ -88,10 +88,12 @@ meta-ads-cli setup
 ```
 
 You'll be prompted for:
-- Profile name (e.g., "default", "client1", etc.)
-- Meta App ID
-- Meta App Secret
-- Ad Account ID (optional, format: act_XXXXXXXXXX)
+- **Profile name** - a local nickname for this saved config (examples: `default`, `client1`). This is just for your machine.
+- **Meta App ID** - from Meta Developer Dashboard → **Settings** → **Basic**.
+- **Meta App Secret** - from the same place (**Settings** → **Basic**).
+- **Ad Account ID** (optional) - from Ads Manager URL, format: `act_XXXXXXXXXX`.
+
+If you're unsure about **Profile name**, keep `default`.
 
 ### 2. Authenticate
 
