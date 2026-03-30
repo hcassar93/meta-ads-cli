@@ -1,3 +1,12 @@
+---
+name: meta-ads-cli-skill
+description: Comprehensive operational guide for agents using Meta Ads CLI.
+version: 1.0.0
+tools:
+  - meta-ads-cli
+  - hcassar-meta-ads
+---
+
 # Meta Ads CLI Skill (`meta-ads-cli`)
 
 This skill teaches an agent how to use Meta Ads CLI safely and effectively in an automated environment.
@@ -202,4 +211,3 @@ meta-ads-cli campaign 120213377777777 --insights --json
 meta-ads-cli adsets 120213377777777 --limit 50 --json
 meta-ads-cli logout --profile default
 ```
-

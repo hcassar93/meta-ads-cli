@@ -1,3 +1,12 @@
+---
+name: meta-ads-cli-compliance-skill
+description: Compliance and safety controls for agents operating Meta Ads CLI.
+version: 1.0.0
+tools:
+  - meta-ads-cli
+  - hcassar-meta-ads
+---
+
 # Compliance Skill: Meta Ads CLI
 
 Compliance rules for agent usage of `meta-ads-cli`.
@@ -110,4 +119,3 @@ meta-ads-cli campaign 120213377777777 --profile client-a --insights --json
 - querying data for wrong account/profile
 - running ambiguous account commands without context checks
 - fabricating metrics or completion states
-
